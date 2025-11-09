@@ -9,28 +9,73 @@
   color: white;
 }
 
-/* ===== NAVIGATION ===== */
-.navbar {
+/* Sticky Navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 12px 0;
-  text-align: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  transition: background 0.3s ease, padding 0.3s ease;
+  font-family: "Georgia", serif;
 }
 
-.nav-item p {
-  font-size: 12px;
-  color: #ddd;
-  margin: 0;
-  font-weight: 300;
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 60px;
 }
 
-.nav-item a {
+nav .logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
   text-decoration: none;
   color: white;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ffd27f;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #ffd27f;
+  transform: translateY(-2px);
 }
 
 .nav-item.current a {
@@ -153,4 +198,5 @@
       text-align: center;
     }
   }
+
   
