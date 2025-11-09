@@ -25,6 +25,11 @@ nav {
   transition: background 0.3s ease, padding 0.3s ease;
   font-family: "Georgia", serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 nav.scrolled {
   background: rgba(0, 0, 0, 0.6);
@@ -200,3 +205,4 @@ nav ul li a:hover {
   }
 
   
+
