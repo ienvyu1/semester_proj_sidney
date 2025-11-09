@@ -1,0 +1,38 @@
+.references {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin: 50px auto;
+  width: 80%;
+  color: white;
+  text-align: left;
+  animation: fadeInUp 1.2s ease-out both;
+}
+
+.references h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.references ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.references li {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.references a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.references a:hover {
+  color: #ffd27f;
+}

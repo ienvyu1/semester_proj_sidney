@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jejak Harmonis</title>
+        <link rel="stylesheet" href="hpstyles.css">      
+  </head>
+  <body class="home-page">
+    <!-- Navigation bar -->
+    <nav id="navbar">
+      <div class="logo">JEJAK HARMONIS.ID</div>
+      <ul>
+        <li><a href="homepage.html">Home Page</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="tentangsaya.html">Tentang Saya</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="content">
+      <h1>Keberagaman Indonesia yang Menyatukan Agama Dan Budaya</h1>
+      <p>
+        Menyelami keindahan Indonesia, di mana perbedaan agama dan budaya
+        berpadu dalam harmoni yang mempersatukan bangsa.
+      </p>
+      <a href="homepage.html" class="button">Home Page</a>
+    </div>
+
+    <script>
+      // Make navbar background solid when scrolling
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sticky Navigation bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 60px;
+}
+
+nav .logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+  transform: scale(1.05);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ffd27f;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #ffd27f;
+  transform: translateY(-2px);
+}
+
+/* === First section background === */
+body {
+  color: white;
+  background-image: url("bgartikel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* === Article content === */
+.article-container {
+  font-family: "Poppins", sans-serif;
+  max-width: 1000px;
+  margin: 40px auto;
+  margin-top: 80px;
+  background-color: rgba(134, 84, 50, 0.45);
+  backdrop-filter: blur(6px);
+  padding: 50px 60px;
+  border-radius: 20px;
+  line-height: 1.7;
+  text-align: justify;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.article-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.article-container h3 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.article-container p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.references {
+  font-family: "Poppins", sans-serif;
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: rgba(134, 84, 50, 0.45);
+  backdrop-filter: blur(6px);
+  padding: 30px 40px;
+  border-radius: 20px;
+  line-height: 1.7;
+  text-align: justify;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.references a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.references a:hover {
+  color: #ffd27f;
+  transform: scale(1.05);
+}
